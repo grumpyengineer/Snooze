@@ -839,6 +839,7 @@ void start_lptmr_systick( void ) {
     LPTMR0_CSR = LPTMR_CSR_TEN | LPTMR_CSR_TFC;
 }
 //----------------------------------------------------------------------------------
+__attribute__((weak))
 void startup_early_hook( void ) {
 #if defined(KINETISK)
     WDOG_STCTRLH = WDOG_STCTRLH_ALLOWUPDATE;
